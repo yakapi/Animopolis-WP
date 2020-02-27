@@ -1,0 +1,561 @@
+/*
+Theme Name: animoplis
+Theme URI: https://animopolis.fr
+Author: Barlier Victor /Jordan Maldiney / Jérome Dias
+Author URI: https://victorbarlier.fr
+Description: Thème privé pour Animopolis
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+@import 'contact';
+@font-face {
+  font-family: "Daniel Black";
+  src: url("assets/font/DANIELBK.TTF") format("ttf");
+}
+$font-txt: "Arial";
+$size-txt: 16px;
+$font-titre: "Daniel Black";
+$size-h3: 18px;
+$size-h2: 20px;
+$size-h1: 22px;
+$blue: #009ee0;
+$red: #e20019;
+$jaune: #f3e518;
+$violet: #a00c58;
+$vert: #97bf0d;
+$orange: #f8b994;
+$gris: #707173;
+.txt-cl-princ{
+  color: $gris;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-family: $font-titre;
+  font-size: $size-h1;
+}
+h2 {
+  font-family: $font-titre;
+  font-size: $size-h2;
+  font-weight: bold;
+}
+h3 {
+  font-family: $font-txt;
+  font-size: $size-h3;
+  font-weight: bold;
+}
+body {
+  font-family: $font-txt;
+  font-size: $size-txt;
+}
+.txt-scde{
+	font-family: $font-titre;
+}
+/*========================================================*/
+/*========================================================*/
+/*===================NAVIGATION===========================*/
+/*========================================================*/
+/*========================================================*/
+.barre-navigation {
+  height: 70px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-logo {
+  height: 50px;
+  width: 50px;
+}
+.menu-main-container {
+  height: 100%;
+  .menu {
+    display: flex;
+    height: 100%;
+    li {
+      width: 120px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: $gris;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+    li:last-child {
+      margin-left: 5px;
+      position: relative;
+    }
+    li:last-child::after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      height: 62px;
+      width: 1px;
+      background-color: grey;
+    }
+  }
+}
+
+/*========================================================*/
+/*========================================================*/
+/*=====================CAROUSEL===========================*/
+/*========================================================*/
+/*========================================================*/
+.carousel-news {
+  height: 420px;
+}
+.container-carousel {
+  border-bottom: 1px solid $gris;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  position: absolute;
+}
+.timer {
+  height: 1%;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: $blue;
+  z-index: 10;
+}
+.slideshow {
+  position: relative;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  background: #bbb;
+  color: #ddd;
+  text-align: center;
+  line-height: 320px;
+  font-size: 640px;
+}
+
+.slide {
+  display: none;
+}
+/*========================================================*/
+/*========================================================*/
+/*=================ABOUT SECTION=========================*/
+/*========================================================*/
+/*========================================================*/
+.about-sct {
+  display: flex;
+  justify-content: space-around;
+}
+.horaire-box,
+.contact-box {
+  height: auto;
+  width: 290px;
+  border: 2px solid $gris;
+  font-family: $font-txt;
+  font-size: $size-txt;
+  color: $gris;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .contact-content {
+    height: 72%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+  }
+  .btn-contact-content {
+    width: 100%;
+    height: auto;
+    background-color: $gris;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: white;
+      padding: 20px;
+    }
+  }
+}
+.biographie-box {
+  height: 250px;
+  width: 560px;
+  border: 2px solid $gris;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: $font-txt;
+  font-size: $size-txt;
+  color: $gris;
+  text-align: center;
+  padding: 15px;
+  .container-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    .logo-bio {
+      height: auto;
+      width: 150px;
+    }
+  }
+}
+.horaire-content,
+.biographie-content {
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-social-media {
+  display: flex;
+  justify-content: space-around;
+  .logo-media{
+    height:30px;
+    width: auto;
+    color: $gris;
+  }
+}
+/*========================================================*/
+/*========================================================*/
+/*=================PET BANNER=============================*/
+/*========================================================*/
+/*========================================================*/
+
+.banner-image {
+  height: 300px;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.banner-content-title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+}
+.banner-box-sizer {
+  margin: 54px;
+}
+.banner-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+.slog {
+  width: 65%;
+}
+.pet-banner .banner-box:nth-child(2n) {
+  .banner-content-title {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .banner-title {
+    flex-direction: row-reverse;
+    h2 {
+      align-self: center;
+    }
+  }
+  .banner-box-sizer {
+    display: flex;
+    flex-direction: column;
+  }
+  .slog {
+    text-align: right;
+    align-self: flex-end;
+  }
+}
+/*========================================================*/
+/*========================================================*/
+/*=================SATISFACTION=============================*/
+/*========================================================*/
+/*========================================================*/
+.satisfaction {
+  display: flex;
+  margin-top: 50px;
+}
+.sat-box {
+  width: 50%;
+}
+.validate-box {
+  border: 1px solid $gris;
+  border-radius: 5px;
+  width: 50%;
+}
+.validate-ligne {
+  display: flex;
+  align-items: center;
+}
+.middle-ligne {
+  background-color: $gris;
+  color: white;
+}
+.encard-check {
+  height: 45px;
+  width: 45px;
+}
+.encard-check img {
+  height: 100%;
+  width: 100%;
+}
+.txt-sat {
+  margin-left: 15px;
+}
+.satisfaction-bar {
+  width: 50%;
+}
+.result-progress {
+  height: 45px;
+  width: 65px;
+  border: 1px solid $gris;
+  border-radius: 5px;
+  top: -15px;
+  right: 0;
+  background-color: $gris;
+  color: white;
+}
+.result-progress::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $gris;
+  top: 35px;
+  transform: rotate(45deg);
+}
+#myProgress {
+  width: 100%;
+  border: 1px solid $gris;
+  border-radius: 5px;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: $gris;
+}
+/*========================================================*/
+/*========================================================*/
+/*=================SINGLE ESPACE=============================*/
+/*========================================================*/
+/*========================================================*/
+.ita{
+  font-style: italic;
+}
+.filter-list{
+	width: 120px;
+}
+.brand-choice-content{
+	width: 85%;
+}
+.marque-block{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.affiche-brand-image{
+	background-color: #EDF8FE;
+	height: 120px;
+	width: 120px;
+
+}
+.encard-logo-brand{
+	height: 80px;
+	width: 80px;
+	img{
+		height: 100%;
+		width: 100%;
+    object-fit: contain;
+	}
+}
+.brand-card{
+  height: 250px;
+  width: 550px;
+  box-shadow: 0px 4px 10px lightgrey;
+}
+.content-brand{
+  width: 350px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+/*========================================================*/
+/*========================================================*/
+/*=================FOOTER=============================*/
+/*========================================================*/
+/*========================================================*/
+footer{
+	margin-top: 50px;
+	height: 200px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: grey;
+    color: white;
+}
+footer a{
+	color:white;
+}
