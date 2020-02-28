@@ -19,25 +19,15 @@
                 </div>
                 <div class="singleconteneur">
                     <h2><?php the_title(); ?></h2>
-                    <div class="singlepost__meta">
-                        <p>
-                            Publié le <?php the_date(); ?>
-                        </p>
-                    </div>
                     <?php the_content(); ?>
+                        <div class="singlepost__meta">
+                            <p>
+                                Publié le <?php the_date(); ?>
+                            </p>
+                        </div>
                 </div>
             </div>
         </article>
-
-        <div class="plus-moins">
-            <div class="plus">
-                <?php echo get_post_meta(get_the_ID(), 'plus', true); ?>
-            </div>
-            <div class="plus">
-                <?php echo get_post_meta(get_the_ID(), 'moins', true); ?>
-            </div>
-        </div>
-
 <?php endwhile;
 endif; ?>
 <?php get_footer(); ?>
