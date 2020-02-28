@@ -11,7 +11,7 @@
   <div class="footer-newsletter">
     <form class="" action="index.html" method="post">
       <label for="newsletter-mail">
-        <h4>Inscrits toi a la Newsletter !</h4>
+        <h4>Inscris toi à la Newsletter !</h4>
       </label>
       <input id="newsletter-mail" type="email" name="newsletter" value="" placeholder="exemple@exemple.com">
       <input type="submit" name="submit" value="Inscription">

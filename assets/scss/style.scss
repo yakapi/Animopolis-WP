@@ -7,7 +7,7 @@ Description: Thème privé pour Animopolis
 Requires at least: WordPress 5.0
 Version: 1.0
 */
-@import 'contact';
+
 @font-face {
   font-family: "Daniel Black";
   src: url("assets/font/DANIELBK.TTF") format("ttf");
@@ -357,8 +357,8 @@ body {
 .contact-social-media {
   display: flex;
   justify-content: space-around;
-  .logo-media{
-    height:30px;
+  .logo-media {
+    height: 30px;
     width: auto;
     color: $gris;
   }
@@ -369,6 +369,10 @@ body {
 /*========================================================*/
 /*========================================================*/
 
+.pet-banner {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .banner-image {
   height: 300px;
   width: 100%;
@@ -396,7 +400,7 @@ body {
 .banner-title {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
 
   h2 {
     font-size: 32px;
@@ -405,6 +409,8 @@ body {
 }
 .slog {
   width: 65%;
+  font-style: italic;
+  font-weight: unset;
 }
 .pet-banner .banner-box:nth-child(2n) {
   .banner-content-title {
@@ -414,7 +420,7 @@ body {
   .banner-title {
     flex-direction: row-reverse;
     h2 {
-      align-self: center;
+      align-self: flex-end;
     }
   }
   .banner-box-sizer {
@@ -544,18 +550,212 @@ body {
 }
 /*========================================================*/
 /*========================================================*/
-/*=================FOOTER=============================*/
+/*=================PAGE CONTACT================================*/
 /*========================================================*/
 /*========================================================*/
-footer{
-	margin-top: 50px;
-	height: 200px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: grey;
+.flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pagecontact {
+    .contact {
+      margin: 5% 5% 0 15%;
+      label {
+        font-size: 20px;
+      }
+      h2 {
+        margin: 30px 0;
+      }
+    }
+    .gmap {
+      margin: 5% 5% 0 5%;
+      .infos {
+        .coordonnees {
+          width: 50%;
+          margin: auto;
+        }
+        .horaires {
+          width: 50%;
+          margin: auto;
+        }
+        background-color: $gris;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .wpcf7 {
+    font-family: Arial, Helvetica, sans-serif !important;
+    width: 115%;
+    #cf7md-form .mdc-button::before,
+    #cf7md-form .mdc-button::after,
+    #cf7md-form .mdc-button--raised:not(:disabled),
+    #cf7md-form .mdc-button--unelevated:not(:disabled) {
+      background-color: $gris;
+    }
+    #cf7md-form .mdc-button--raised,
+    #cf7md-form .mdc-button--unelevated {
+      width: 100%;
+    }
+
+    textarea {
+      height: 150px !important;
+      resize: none;
+    }
+  }
+
+  /*========================================================*/
+  /*========================================================*/
+  /*=================PAGE NEWS=============================*/
+  /*========================================================*/
+  /*========================================================*/
+
+  .singlepost {
+    width: auto;
+    margin: 6%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .singleimagearticle{
+      border: 1px solid $gris;
+      position: absolute;
+      img {
+
+      width: 750px;
+      height: 600px;
+      object-fit: contain;
+      background-color: white;
+    }
+    }
+
+  }
+  .singlepost__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $gris;
+    justify-content: center;
+    min-height: 450px;
+    .singleconteneur {
+      margin-left: 750px;
+          height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 30px;
+      font-family: $font-txt;
+      font-size: $size-txt;
+      color: white;
+      overflow: auto;
+      h2 {
+        font-family: $font-txt;
+        font-size: $size-h2;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+      }
+      .singlepost__meta {
+        font-style: italic;
+        padding: 20px 0;
+      }
+    }
+  }
+  /*========================================================*/
+  /*========================================================*/
+  /*=================BLOG=============================*/
+  /*========================================================*/
+  /*========================================================*/
+
+  .post {
+    width: auto;
+    margin: 5%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+
+    .img__post {
+      width: 25%;
+      height: 100%;
+      border: 1px $gris solid;
+         overflow: hidden;
+      img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      }
+    }
+    .post__content {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      background-color: $gris;
+      align-items: left;
+      justify-content: center;
+
+      .conteneur {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+        font-family: $font-txt;
+        font-size: $size-txt;
+        color: white;
+        h2 {
+          font-family: $font-txt;
+          font-size: $size-h2;
+          font-weight: bold;
+          color: white;
+          text-transform: uppercase;
+        }
+        .post__meta{
+          font-style: italic;
+          margin-top: -20px;
+        }
+        .post__link{
+          text-decoration: none;
+          color: $gris;
+          width: 120px;
+          background-color: white;
+          text-align: center;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+  /*========================================================*/
+  /*========================================================*/
+  /*===================FOOTER=============================*/
+  /*========================================================*/
+  /*========================================================*/
+  footer {
+    margin-top: 50px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $gris;
     color: white;
-}
-footer a{
-	color:white;
-}
+    text-transform: capitalize;
+    line-height: 30px;
+    a {
+      color: white;
+    }
+    .footer-newsletter {
+      form {
+        label {
+          text-transform: none;
+        }
+      }
+    }
+    .social-media-f {
+      text-align: left;
+    }
+  }
