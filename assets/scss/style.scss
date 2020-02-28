@@ -288,6 +288,20 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.container-logo ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-logo ul li{
+  height: 78px;
+  width: 125px;
+  object-fit: contain;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
 .horaire-box,
 .contact-box {
   height: auto;

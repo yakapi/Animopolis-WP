@@ -17,7 +17,7 @@
   <div class="pagecontact flex">
     <div class="contact">
       <h2>Contact</h2>
-      <?php echo do_shortcode('[contact-form-7 id="76" title="Formulaire contact"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="5" title="Formulaire contact"]'); ?>
     </div>
     <div class="gmap">
       <iframe width="720" height="400" src="https://maps.google.com/maps?width=720&amp;height=550&amp;hl=en&amp;q=ZA%20des%20pr%C3%A8s%20chalots%2C%20Rue%20des%20Pr%C3%A9s%20Chalots%2C%2025220%20Roche-lez-Beaupr%C3%A9+(Animopolis)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">latitude longitude finder</a></iframe>
